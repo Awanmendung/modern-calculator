@@ -45,6 +45,12 @@ def index():
     """Render the calculator page"""
     return render_template('index.html')
 
+@app.route('/privacy-policy')
+def privacy_policy():
+    """Serve privacy policy page"""
+    return app.send_static_file('../privacy-policy.html')
+
+
 @app.route('/api/calculate', methods=['POST'])
 def calculate():
     """
