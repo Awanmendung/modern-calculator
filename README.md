@@ -6,10 +6,12 @@ A beautiful, full-stack calculator application built with Flask and modern CSS.
 
 ## ✨ Features
 
+- **Progressive Web App (PWA)**: Install on Android like a native app! 📱
 - **Modern UI**: Glassmorphism design with animated background
 - **Full-Stack**: Flask backend with REST API
 - **History Tracking**: View and reuse previous calculations
 - **Keyboard Support**: Use your keyboard for faster input
+- **Offline Support**: Works without internet after first load
 - **Responsive**: Works on desktop and mobile devices
 - **Production Ready**: Configured for multiple deployment platforms
 
@@ -39,6 +41,31 @@ A beautiful, full-stack calculator application built with Flask and modern CSS.
 
 4. **Open your browser**
    Navigate to `http://localhost:5000`
+
+## 📱 Progressive Web App (PWA)
+
+### Live Demo
+🌐 **https://awanmendung.pythonanywhere.com**
+
+### Install on Android
+
+This calculator is a **Progressive Web App** and can be installed on Android devices:
+
+1. Open **Chrome** on your Android device
+2. Visit: `https://awanmendung.pythonanywhere.com`
+3. Tap the **menu (⋮)** in the top-right corner
+4. Select **"Add to Home screen"** or **"Install app"**
+5. Tap **"Add"** - the app icon will appear on your home screen!
+
+### PWA Features
+
+- ✅ **Installable**: Works like a native app
+- ✅ **Offline Support**: Cached for offline use
+- ✅ **Fast Loading**: Service worker caching
+- ✅ **Fullscreen**: No browser UI when launched
+- ✅ **App Icon**: Beautiful gradient icon on home screen
+
+📖 **Detailed Installation Guide**: See [PWA_INSTALL_GUIDE.md](./PWA_INSTALL_GUIDE.md)
 
 ## 📦 Deployment Options
 
@@ -140,9 +167,16 @@ calculator/
 ├── Dockerfile          # Docker configuration
 ├── Procfile            # Heroku/Railway config
 ├── render.yaml         # Render.com config
+├── PWA_INSTALL_GUIDE.md # PWA installation guide
 ├── templates/
-│   └── index.html      # Main HTML template
+│   └── index.html      # Main HTML template (with PWA support)
 └── static/
+    ├── manifest.json   # PWA manifest
+    ├── sw.js           # Service worker for offline support
+    ├── icons/          # PWA app icons
+    │   ├── icon-72x72.png
+    │   ├── icon-192x192.png
+    │   └── icon-512x512.png
     ├── css/
     │   └── style.css   # Stylesheets
     └── js/
